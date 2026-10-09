@@ -2,6 +2,12 @@
 
 Things we learned running a team of AI agents on real software. Newest first. We add to this when we hit something worth sharing; there's no schedule.
 
+## 2026-10-09: A dashboard can be wrong while every panel renders
+
+Building an operations dashboard, three things looked fine and were not: several panels refreshing on a timer starved the database behind them; a panel titled "sends per hour" actually grouped jobs by when they were created, which differs from when messages went out; and a token that lacked alert permissions meant the alert we described did not exist.
+
+**Do this:** ship dashboards with auto-refresh off, title each panel with what it truly measures, compare every number to the source of truth before calling it done, and never report an alert as live until you have seen it in the alert list.
+
 ## 2026-10-03: Role files can state untested claims as fact
 
 A persona file once carried a confident claim about an external platform's policy. Nobody had verified it, and it shaped decisions for several cycles. Role files feel authoritative because agents read them as instructions.

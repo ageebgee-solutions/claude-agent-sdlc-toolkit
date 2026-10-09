@@ -15,7 +15,7 @@ There are other multi-role agent frameworks. [BMAD-METHOD](https://github.com/bm
 
 If you want those rules and not a whole methodology, this is for you.
 
-## What's in v0.1
+## What's in v0.2
 
 | Role | Type | What it does |
 |---|---|---|
@@ -26,6 +26,7 @@ If you want those rules and not a whole methodology, this is for you.
 | [`qa-engineer`](agents/qa-engineer.md) | Gate | Test plans, edge cases, APPROVED / REJECTED against staging. |
 | [`security-reviewer`](agents/security-reviewer.md) | Reviewer | Threat review: authn/authz, secrets, webhooks, tenant isolation. |
 | [`architect`](agents/architect.md) | Advisor | Designs and hard-to-reverse technical decisions. |
+| [`grafana-engineer`](agents/grafana-engineer.md) | Engineer | Grafana dashboards and alert rules as code, least-privilege data sources, every panel checked against the real system. |
 
 And the [release validation playbook](playbooks/release-validation.md), which is the part to read first.
 
@@ -93,13 +94,13 @@ This was one run per scenario, so it shows the gates can hold, not that they alw
 
 ## The product-owner role
 
-The playbook needs a second, independent approval. In v0.1 that's **you**. If you'd like an agent to do the product-side smoke test, add a `product-owner.md` that checks the acceptance criteria and release notes. We haven't published ours yet because it's tied to our products.
+The playbook needs a second, independent approval. By default that's **you**. If you'd like an agent to do the product-side smoke test, add a `product-owner.md` that checks the acceptance criteria and release notes. We haven't published ours yet because it's tied to our products.
 
 ## Status and honesty
 
 - These role files come from a working system we use daily. This extracted, generalized version has had company-specific content removed and **has not been run end to end in exactly this form** outside our own setup. Expect rough edges and tell us.
 - The roles are prompts, not guarantees. They improve consistency, and they don't replace reviewing what the agents produce.
-- Last reviewed: 2026-10-03.
+- Last reviewed: 2026-10-09.
 
 ## Contributing
 
