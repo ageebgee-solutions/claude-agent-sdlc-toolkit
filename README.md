@@ -15,7 +15,7 @@ There are other multi-role agent frameworks. [BMAD-METHOD](https://github.com/bm
 
 If you want those rules and not a whole methodology, this is for you.
 
-## What's in the toolkit
+## What's in v0.2
 
 | Role | Type | What it does |
 |---|---|---|
@@ -94,7 +94,7 @@ This was one run per scenario, so it shows the gates can hold, not that they alw
 
 ## The product-owner role
 
-The playbook needs a second, independent approval. In v0.1 that's **you**. If you'd like an agent to do the product-side smoke test, add a `product-owner.md` that checks the acceptance criteria and release notes. We haven't published ours yet because it's tied to our products.
+The playbook needs a second, independent approval. By default that's **you**. If you'd like an agent to do the product-side smoke test, add a `product-owner.md` that checks the acceptance criteria and release notes. We haven't published ours yet because it's tied to our products.
 
 ## Status and honesty
 
