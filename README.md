@@ -2,7 +2,7 @@
 
 A small set of role definitions for running a software team with [Claude Code](https://claude.com/claude-code): an orchestrator, an engineering manager, .NET and frontend engineers, QA, a security reviewer, and an architect, plus a release gate that needs two independent approvals before anything ships.
 
-It's free (MIT) and it's what we at [AgeeBgee Solutions](https://ageebgeesolutions.com) use to build our own products, with the company-specific parts removed. We add to it when we learn something worth sharing. See [LEARNINGS.md](LEARNINGS.md).
+It's free (MIT) and it's what we at [AgeeBgee Solutions](https://ageebgeesolutions.com) use to build our own products, with the company-specific parts removed. We add to it when we learn something worth sharing. See [LEARNINGS.md](LEARNINGS.md). For a write-up of five ways our agents went wrong and what we changed, see [this post on dev.to](https://dev.to/bgelfius/five-ways-my-ai-agents-went-wrong-and-what-i-changed-6gk).
 
 ## What makes it different
 
@@ -100,7 +100,7 @@ The playbook needs a second, independent approval. By default that's **you**. If
 
 - These role files come from a working system we use daily. This extracted, generalized version has had company-specific content removed and **has not been run end to end in exactly this form** outside our own setup. Expect rough edges and tell us.
 - The roles are prompts, not guarantees. They improve consistency, and they don't replace reviewing what the agents produce.
-- Last reviewed: 2026-10-09.
+- Last reviewed: 2026-10-12.
 
 ## Contributing
 
