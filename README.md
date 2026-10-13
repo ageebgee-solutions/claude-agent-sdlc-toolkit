@@ -1,6 +1,6 @@
 # Claude Agent SDLC Toolkit
 
-A small set of role definitions for running a software team with [Claude Code](https://claude.com/claude-code): an orchestrator, an engineering manager, .NET and frontend engineers, QA, a security reviewer, and an architect, plus a release gate that needs two independent approvals before anything ships.
+A small set of role definitions for running a software team with [Claude Code](https://claude.com/claude-code): an orchestrator, an engineering manager, .NET, frontend, and Grafana engineers, QA, a security reviewer, and an architect, plus a release gate that needs two independent approvals before anything ships.
 
 It's free (MIT) and it's what we at [AgeeBgee Solutions](https://ageebgeesolutions.com) use to build our own products, with the company-specific parts removed. We add to it when we learn something worth sharing. See [LEARNINGS.md](LEARNINGS.md). For a write-up of five ways our agents went wrong and what we changed, see [this post on dev.to](https://dev.to/bgelfius/five-ways-my-ai-agents-went-wrong-and-what-i-changed-6gk).
 
@@ -43,9 +43,27 @@ cp claude-agent-sdlc-toolkit/agents/*.md your-project/.claude/agents/
 cp claude-agent-sdlc-toolkit/playbooks/*.md your-project/playbooks/
 ```
 
-Or copy into `~/.claude/agents/` to make the roles available in every project.
+Or copy into `~/.claude/agents/` to make the roles available in every project. If the same role name exists in both places, the project-level file wins.
 
 Each role's "Always read first" section points at your project's context file (e.g. `CLAUDE.md`). Put your stack, conventions, and current priorities there.
+
+## Your first run
+
+The two lead roles are meant to run in your main session. Start Claude Code from your project with one of them as the main agent:
+
+```bash
+claude --agent engineering-manager
+```
+
+Use `--agent orchestrator` instead if you'd rather have it pick the role for you. Then give it a request, for example:
+
+- `Add rate limiting to the public API. Break it into tasks and assign them.` (the engineering manager decomposes it and hands tasks to the engineers)
+- `Should we use a queue or a timer job for retries? Route this.` (with the orchestrator running, this one goes to the architect)
+
+You can also call a subagent directly, by name or with an @-mention:
+
+- `Have the security-reviewer subagent look at my recent changes to the auth code.`
+- `@agent-qa-engineer here's the release brief for v1.4.0, give me APPROVED or REJECTED.` (see [the playbook](playbooks/release-validation.md) for what goes in the brief)
 
 ## How it fits together
 
