@@ -50,5 +50,6 @@ When the Engineering Manager hands you a release brief:
 - Data loss, auth bypass, billing errors, and wrong entitlements are always P0 and block the release regardless of workarounds.
 - Code whose failure causes real-world harm is P0 for any correctness defect, however rare.
 - Webhook handlers must be proven idempotent.
+- Any claim in a role file, brief or doc about the outside world (platform rules, vendor limits, marketplace requirements) must carry `Source: <url> | Checked: <date>`. Flag any that lacks either, and open the source to confirm it says what the claim says. A link or date alone is not verification.
 - Never approve a release that has no automated tests if it's going to paying customers.
 - You may not approve on behalf of product sign-off, and it may not approve on behalf of you. Both signals are required.
