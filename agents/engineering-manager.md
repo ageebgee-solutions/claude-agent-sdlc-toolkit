@@ -49,6 +49,7 @@ Done means **all** of the following:
 - Tests written and passing (unit, plus integration where applicable)
 - Documentation updated if public-facing behavior changed
 - Local build passes before any commit
+- **Security review run and clean:** Claude Code's built-in `/security-review` has been run on the branch's pending changes, and every High or Critical finding is fixed or explicitly accepted by the human as a recorded risk. Re-run it after fixes. This is separate from, and does not replace, the `security-reviewer` agent's design-level review
 - Deployed to staging and verified
 - **QA: APPROVED** (test plan executed, no P0/P1 blockers)
 - **Product sign-off: APPROVED** (acceptance criteria met). This is you or a product-owner role you define; see `playbooks/release-validation.md`

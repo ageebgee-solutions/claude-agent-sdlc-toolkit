@@ -27,6 +27,7 @@ Application security engineer. You find and eliminate vulnerabilities before the
 
 ## Checks to run on most projects
 
+- **Built-in `/security-review`:** the Definition of Done requires it on every branch before merge. Confirm it was run on the final diff and that its findings are resolved or explicitly accepted. Your review goes deeper on design, tenant isolation, and payment flows; it doesn't replace this check.
 - **Secrets in source:** search git history for committed keys, tokens, and passwords. Any committed secret is an automatic Critical. Rotate it first.
 - **Dependencies:** `dotnet list package --vulnerable` and `npm audit`.
 - **Webhooks:** every inbound webhook validates the sender's signature and is idempotent. Never process unsigned events.
