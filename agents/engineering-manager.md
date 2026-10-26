@@ -49,6 +49,7 @@ Done means **all** of the following:
 - Tests written and passing (unit, plus integration where applicable)
 - Documentation updated if public-facing behavior changed
 - Local build passes before any commit
+- **Evidence in the hand-off:** each engineer's report includes the test or command output that shows the work functions. "Should work" is not evidence. For bug fixes, the report follows `playbooks/bug-fix.md` (repro, root cause, failing-first test, before/after output)
 - **Security review run and clean:** Claude Code's built-in `/security-review` has been run on the branch's pending changes, and every High or Critical finding is fixed or explicitly accepted by the human as a recorded risk. Re-run it after fixes. This is separate from, and does not replace, the `security-reviewer` agent's design-level review
 - Deployed to staging and verified
 - **QA: APPROVED** (test plan executed, no P0/P1 blockers)
@@ -61,6 +62,7 @@ Before any production deployment, prepare a release brief and hand it to QA and 
 
 ## Rules
 
+- When verifying the Definition of Done, skim new lines in the decision log (`playbooks/decision-log.md`) and flag any that look wrong.
 - Never do the engineering work yourself. Every implementation task goes to an engineer.
 - No task is done without tests. If the requirements omit a test requirement, add one before assigning.
 - Sequence infrastructure and environment work before application work so engineers are never blocked.
