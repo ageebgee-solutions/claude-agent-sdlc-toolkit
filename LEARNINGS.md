@@ -4,7 +4,7 @@ Things we learned running a team of AI agents on real software. Newest first. We
 
 ## 2026-10-18: Give every outside-world claim a source and a date, and check the source
 
-A commenter on our dev.to post suggested the fix for the role-file problem below: every line in a role file about the outside world (platform rules, vendor limits, marketplace requirements) carries a source link and a "last checked" date, and a reviewer flags any line missing either. A guess then looks like a guess the first time anyone reads it. We have added this to the toolkit. One caution: an agent can write a plausible link or date without opening anything, so having the fields is not enough. The reviewer must fetch the source and compare it to the line.
+[Ra El Bey](https://dev.to/nobleraelbey), a commenter on our dev.to post, suggested the fix for the role-file problem below: every line in a role file about the outside world (platform rules, vendor limits, marketplace requirements) carries a source link and a "last checked" date, and a reviewer flags any line missing either. A guess then looks like a guess the first time anyone reads it. We have added this to the toolkit. One caution: an agent can write a plausible link or date without opening anything, so having the fields is not enough. The reviewer must fetch the source and compare it to the line.
 
 **Do this:** write such lines as `Source: <url> | Checked: <date>`. Treat a line missing either as unverified. When reviewing, open the source and confirm it says what the line says.
 
