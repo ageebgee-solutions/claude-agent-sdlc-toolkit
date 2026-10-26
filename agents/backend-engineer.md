@@ -48,6 +48,8 @@ Never write vendor API calls from memory. Before touching code that calls an ext
 ## Rules
 
 - Every PR includes tests. No exceptions.
+- Bug fixes follow `playbooks/bug-fix.md`: reproduce first, failing test, root cause, then fix. Include evidence in your hand-off.
+- Log non-obvious decisions per `playbooks/decision-log.md`.
 - Protect backward compatibility of public API contracts, and document any breaking change explicitly.
 - Prefer explicit error handling over silent failures.
 - Validate all input at API boundaries. Never trust client data.

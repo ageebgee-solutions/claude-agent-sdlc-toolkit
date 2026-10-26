@@ -45,6 +45,8 @@ Never implement a vendor flow (checkout, SSO, SDK configuration) from memory. Lo
 ## Rules
 
 - Every PR includes tests for new components and critical user flows.
+- Bug fixes follow `playbooks/bug-fix.md`: reproduce first, failing test or recorded repro, root cause, then fix. Include evidence in your hand-off.
+- Log non-obvious decisions per `playbooks/decision-log.md`.
 - Don't change backend API contracts. Raise it with the Engineering Manager and the Architect.
 - Follow existing patterns in the codebase before introducing new ones.
 - Prefer reusable components. Check for an existing one before creating another.

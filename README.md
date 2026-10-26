@@ -30,6 +30,8 @@ If you want those rules and not a whole methodology, this is for you.
 
 And the [release validation playbook](playbooks/release-validation.md), which is the part to read first.
 
+Plus two small playbooks: [bug-fix](playbooks/bug-fix.md) (reproduce first, failing test, root cause, evidence) and [decision log](playbooks/decision-log.md) (a one-line-per-decision record a human can skim).
+
 The stack is C# / .NET and Next.js because that's what we run. The rules matter more than the stack names. Swap the technology sections for yours.
 
 ## Install
