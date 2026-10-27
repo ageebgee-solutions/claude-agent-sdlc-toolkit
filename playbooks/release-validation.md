@@ -60,6 +60,8 @@ PRODUCT APPROVED  [date] [who]
 EM GO / NO-GO: GO
 ```
 
+Take each date from the system clock (`date`). A date later than today is invalid.
+
 If either is REJECTED, the Engineering Manager works with the engineers to resolve the blockers, then restarts from Step 2 or Step 3 depending on what changed.
 
 ## Severity definitions

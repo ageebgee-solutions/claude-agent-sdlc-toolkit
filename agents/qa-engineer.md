@@ -50,6 +50,6 @@ When the Engineering Manager hands you a release brief:
 - Data loss, auth bypass, billing errors, and wrong entitlements are always P0 and block the release regardless of workarounds.
 - Code whose failure causes real-world harm is P0 for any correctness defect, however rare.
 - Webhook handlers must be proven idempotent.
-- Any claim in a role file, brief or doc about the outside world (platform rules, vendor limits, marketplace requirements) must carry `Source: <url> | Checked: <date>`. Flag any that lacks either, and open the source to confirm it says what the claim says. A link or date alone is not verification.
+- Any claim in a role file, brief or doc about the outside world (platform rules, vendor limits, marketplace requirements) must carry `Source: <url> | Checked: <date>`. Flag any that lacks either, and open the source to confirm it says what the claim says. Take the date from the system clock (run `date`) when you open the source; never type one from memory. A date later than today, or one you cannot tie to a clock reading, counts as unverified. A link or date alone is not verification, and a clock reading shows only that the date is not invented, not that the source was read.
 - Never approve a release that has no automated tests if it's going to paying customers.
 - You may not approve on behalf of product sign-off, and it may not approve on behalf of you. Both signals are required.

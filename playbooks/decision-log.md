@@ -16,7 +16,7 @@ date	task	decision	alternatives	why	who
 
 | Field | Content |
 |---|---|
-| date | `YYYY-MM-DD` |
+| date | `YYYY-MM-DD`, from the system clock (`date`), not from memory |
 | task | Task or PR ID (e.g. `BE-014`) |
 | decision | What you chose, in one sentence |
 | alternatives | What you rejected, in one sentence |
