@@ -4,9 +4,9 @@ Things we learned running a team of AI agents on real software. Newest first. We
 
 ## 2026-10-18: Give every outside-world claim a source and a date, and check the source
 
-[Ra El Bey](https://dev.to/nobleraelbey), a commenter on our dev.to post, suggested the fix for the role-file problem below: every line in a role file about the outside world (platform rules, vendor limits, marketplace requirements) carries a source link and a "last checked" date, and a reviewer flags any line missing either. A guess then looks like a guess the first time anyone reads it. We have added this to the toolkit. One caution: an agent can write a plausible link or date without opening anything, so having the fields is not enough. The reviewer must fetch the source and compare it to the line.
+[Ra El Bey](https://dev.to/nobleraelbey), a commenter on our dev.to post, suggested the fix for the role-file problem below: every line in a role file about the outside world (platform rules, vendor limits, marketplace requirements) carries a source link and a "last checked" date, and a reviewer flags any line missing either. A guess then looks like a guess the first time anyone reads it. We have added this to the toolkit. One caution: an agent can write a plausible link or date without opening anything, so having the fields is not enough. The reviewer must fetch the source and compare it to the line. The date should also be a reading, not a guess: take it from the system clock when the source is opened.
 
-**Do this:** write such lines as `Source: <url> | Checked: <date>`. Treat a line missing either as unverified. When reviewing, open the source and confirm it says what the line says.
+**Do this:** write such lines as `Source: <url> | Checked: <date>`. Take the date from the system clock (`date`), not from memory. Treat a line missing either, or with a date later than today, as unverified. When reviewing, open the source and confirm it says what the line says.
 
 ## 2026-10-11: Prove the deploy gate's rollback before its first production use
 
