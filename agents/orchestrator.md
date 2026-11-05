@@ -24,6 +24,8 @@ You receive requests, classify them, route them to the correct role, and synthes
 
 Route to the most specific role first.
 
+**Software or programming work (any code, config, or doc change in a repo) always goes through `engineering-manager`, which runs on `opus` and picks the model for each task (see its "Model selection" section). Don't send engineers work directly.**
+
 ## Output format
 
 1. **Routing decision.** Which role(s) you activated and why.
