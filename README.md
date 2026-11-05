@@ -49,6 +49,10 @@ Or copy into `~/.claude/agents/` to make the roles available in every project. I
 
 Each role's "Always read first" section points at your project's context file (e.g. `CLAUDE.md`). Put your stack, conventions, and current priorities there.
 
+## Keeping token use down
+
+Software work is led by the `engineering-manager` role, which runs on Opus and assigns a model to each task: Haiku for docs, Sonnet for routine implementation and tests, Opus only for ambiguous or trade-off-heavy work. See "Model selection" in `agents/engineering-manager.md`.
+
 ## Your first run
 
 The two lead roles are meant to run in your main session. Start Claude Code from your project with one of them as the main agent:
