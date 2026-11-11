@@ -6,10 +6,7 @@ The toolkit is Markdown files: role prompts in `agents/`, playbooks in `playbook
 
 ## Reporting a vulnerability
 
-Please report security problems privately. Use either:
-
-- GitHub's **private vulnerability reporting** on this repository (Security tab, then "Report a vulnerability"), or
-- Email **bryan@ageebgeesolutions.com**.
+Please report security problems privately by email to **bryan@ageebgeesolutions.com**.
 
 Include the file and line, what the problem is, and what it could lead to. Please don't open a public issue for a security problem.
 
