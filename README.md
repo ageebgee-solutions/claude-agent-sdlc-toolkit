@@ -128,7 +128,7 @@ The playbook needs a second, independent approval. By default that's **you**. If
 
 ## Contributing
 
-Issues and PRs are welcome, especially concrete things that went wrong or right when you used a role. Keep roles short and make rules specific enough to be checkable.
+Issues and PRs are welcome, especially concrete things that went wrong or right when you used a role. Keep roles short and make rules specific enough to be checkable. See [CONTRIBUTING.md](CONTRIBUTING.md) for how to propose a change or a new role. Participation is covered by the [Code of Conduct](CODE_OF_CONDUCT.md), and security reports go through [SECURITY.md](SECURITY.md).
 
 ## License
 
